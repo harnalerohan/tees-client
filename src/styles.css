@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.btn,
+.jumbotron,
+.nav :hover {
+  border-radius: 0px;
+}
+
+.container-fluid{
+  padding: 0px;
+}
+
+/* footer {
+  position:absolute;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
+  height: 100px;
+  overflow: hidden;
+} */
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
