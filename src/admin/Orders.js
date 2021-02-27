@@ -74,8 +74,9 @@ const Orders = () => {
 
   const bottomButtonRow = (order) => {
     return(
-      <div className = "row mt-3">
-      <div className="col-3">
+      <div className = "row mt-2">
+
+      <div className="col-sm-3 mt-4">
       <button className={order.status === "Received" ? "disabled btn btn-block bg-warning" : "btn btn-block bg-danger"}>[Status: {order.status}]</button>
       </div>
       <div className="col-3">
@@ -84,7 +85,7 @@ const Orders = () => {
       <div className="col-3">
 
       </div>
-      <div className="col-3">
+      <div className="col-sm-3 mt-4">
       <button onClick={() => cancelTheOrder(order)} className="btn btn-block btn-danger">Cancel This order</button>
       </div>
     </div>
@@ -102,7 +103,7 @@ const Orders = () => {
             </div>
             <div className="card-body">
               <div className="row">
-                <div className="col-6">
+                <div className="col-md-6 mt-4">
                   <div className="card text-dark">
                     <div className="card-header">
                       Purchases
@@ -120,7 +121,7 @@ const Orders = () => {
                 </div>
 
                 {/* second card */}
-                <div className="col-6">
+                <div className="col-md-6 mt-4">
 
                   {userDetailsCard(order)}
                   {paymentDetailsCard(order)}
