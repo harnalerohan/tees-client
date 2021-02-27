@@ -22,9 +22,15 @@ const Card = ({
   const addToCart = () => {
     addItemToCart(product, () => {
       setAddedToCart(true)
+      setTime()
     })
   }
 
+  const setTime = () => {
+    setTimeout(() => {
+      setAddedToCart(false)
+    }, 1000);
+  }
 
   removeItemFromCart((productId) => {
       console.log("Hello")

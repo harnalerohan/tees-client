@@ -15,7 +15,6 @@ const Orders = () => {
         setError(data.error)
         console.log(data.error)
       }else{
-        console.log(data)
         setOrders(data)
       }
     }).catch(err => console.log(err))
@@ -31,7 +30,6 @@ const Orders = () => {
         setError(data.error)
         console.log(data.error)
       }else{
-        console.log(data)
         preload()
       }
     }).catch(err => console.log(err))

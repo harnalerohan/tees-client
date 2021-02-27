@@ -22,7 +22,6 @@ const Payment = ({products, setReload = (f) => f, reload = undefined}) => {
 
   const getToken = () => {
     getMeToken(userId, token).then(info => {
-      console.log("information", info)
       if(info){
         setinfo({
           ...info,

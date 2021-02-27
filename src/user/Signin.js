@@ -8,8 +8,8 @@ import UserService from "../auth/helper"
 const Signin = () => {
 
   const [values, setValues] = useState({
-    email: "therohan@gmail.com",
-    password: "123456",
+    email: "",
+    password: "",
     error: "",
     loading: false,
     didRedirect: false

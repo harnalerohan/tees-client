@@ -1,7 +1,6 @@
 import { API } from "../../backend";
 
 export const getMeToken = (userId, token) => {
-  console.log("userId ---" + userId +"Token--" +token)
   return fetch(`${API}payment/gettoken/${userId}`, {
     method: "GET",
     headers: {
@@ -10,7 +9,6 @@ export const getMeToken = (userId, token) => {
       Authorization: `Bearer ${token}`
     }
   }).then((response) => {
-    console.log(response)
     return response.json();
   }).catch(err => {
     console.log(err)

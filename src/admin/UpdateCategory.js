@@ -17,7 +17,6 @@ const UpdateCategory = () => {
   const handleChange = (e) => {
     setError("")
     setName(e.target.value)
-    console.log(name)
   }
 
   const onUpdate = (e) => {
@@ -58,7 +57,7 @@ const UpdateCategory = () => {
 
   const successMessage = () => {
     if(success){
-      return <h4 className="text-success">Category created succesfully</h4>
+      return <h4 className="text-success">Category updated succesfully</h4>
     }
   }
 
@@ -100,7 +99,6 @@ const UpdateCategory = () => {
           {warningMessage()}
           {categoryForm()} 
           {goBack()}
-          <p>{name}</p>
         </div>
       </div>
     </Base>

@@ -52,7 +52,6 @@ const Home = () => {
           )
         })}
         </div>
-        {console.log(products)}
       </div>
     </Base>
   );

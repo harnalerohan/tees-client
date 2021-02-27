@@ -20,7 +20,6 @@ const AddCategory = () => {
   const handleChange = (e) => {
     setError("")
     setName(e.target.value)
-    console.log(name)
   }
 
   const onClick = (e) => {
