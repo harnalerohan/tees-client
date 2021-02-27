@@ -83,6 +83,7 @@ const Signin = () => {
 
   const signInForm = () => {
     return(
+        <div className="container">
         <div className="text-left">
           <form action="">
 
@@ -99,6 +100,7 @@ const Signin = () => {
             <button onClick={onSubmit} className="btn btn-success col-12 mt-4 mb-5">Submit</button>
 
           </form>
+        </div>
         </div>
     )
   }
