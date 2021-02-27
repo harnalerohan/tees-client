@@ -83,8 +83,7 @@ const Signin = () => {
 
   const signInForm = () => {
     return(
-      <div className="row">
-        <div className="col-md-6 offset-sm-3 text-left">
+        <div className="text-left">
           <form action="">
 
             <div className="form-group mt-3">
@@ -97,19 +96,18 @@ const Signin = () => {
               <input value={password} onChange={handleChange("password")} className="form-control" type="password"/>
             </div>
 
-            <button onClick={onSubmit} className="btn btn-success col-12 mt-4">Submit</button>
+            <button onClick={onSubmit} className="btn btn-success col-12 mt-4 mb-5">Submit</button>
 
           </form>
         </div>
-      </div>
     )
   }
 
   return (
-    <Base title = "Sign In Page" description = "A page for user to sign In">
+    <Base title = "Sign In Page" description = "A page for user to sign In" className="container">
       {loadingMessage()}
-      {errorMessage()}
       {signInForm()}
+      {errorMessage()}
       {performRedirect()}
       {/* <p>{JSON.stringify(values)}</p> */}
     </Base>

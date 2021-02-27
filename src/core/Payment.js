@@ -107,7 +107,7 @@ const Payment = ({products, setReload = (f) => f, reload = undefined}) => {
   }
 
   return (
-    <div>
+    <div className="">
       <h3>Your bill is {getAmount()}</h3>
       {showBrainTree()}
     </div>

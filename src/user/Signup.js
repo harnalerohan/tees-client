@@ -50,8 +50,8 @@ const Signup = () => {
 
   const signUpForm = () => {
     return(
-      <div className="row">
-        <div className="col-md-6 offset-sm-3 text-left">
+      <div className="container">
+        <div className="text-left">
           <form action="">
 
             <div className="form-group">
@@ -107,7 +107,6 @@ const Signup = () => {
       {successMessage()}
       {errorMessage()}
       {signUpForm()}
-      <p className="text-white text-center">{JSON.stringify(values)}</p>
     </Base>
   );
 };

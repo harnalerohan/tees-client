@@ -63,10 +63,10 @@ const AdminDashboard = () => {
   return (
     <Base title="Welcome to admin dashboard" description="Manage all of your orders here." className="container bg-success p-4">
       <div className="row">
-        <div className="col-3">
+        <div className="col-md-3 mt-3">
         {adminLeftSide()}
         </div>
-        <div className="col-9">
+        <div className="col-md-9 mt-3">
         {adminRightSide()}
         </div>
       </div>

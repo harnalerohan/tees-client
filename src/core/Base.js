@@ -28,7 +28,7 @@ const Base = ({
           <button className = "btn btn-warning btn-lg">Contact Us</button>
         </div>
         <div className = "container">
-          <span className = "text-muted">App created with<span className="text-white"> React </span>By <span className="text-white"> Rohan </span></span>
+          <span className = "text-muted">App created using<span className="text-white"> MERN </span>By <span className="text-white"> Rohan </span></span>
         </div>
       </footer>
   </div>

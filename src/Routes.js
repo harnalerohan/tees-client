@@ -25,6 +25,7 @@ const Routes = () => {
         <Route path = "/signup" exact component = {Signup}/>
         <Route path = "/signin" exact component = {Signin}/>
         <PrivateRoute path = "/user/dashboard" exact component = {UserDashboard}/>
+        <PrivateRoute path = "/cart" exact component = {Cart}/>
         <AdminRoute path = "/admin/dashboard" exact component = {AdminDashboard}/>
         <AdminRoute path = "/admin/create/category" exact component = {AddCategory}/>
         <AdminRoute path = "/admin/categories" exact component = {ManageCategories}/>
@@ -33,7 +34,6 @@ const Routes = () => {
         <AdminRoute path = "/admin/product/update/:productId" exact component = {UpdateProduct}/>
         <AdminRoute path = "/admin/category/update/:categoryId" exact component = {UpdateCategory}/>
         <AdminRoute path = "/admin/orders" exact component = {Orders}/>
-        <Route path = "/cart" exact component = {Cart}/>
       </Switch>
     </BrowserRouter>
   )
