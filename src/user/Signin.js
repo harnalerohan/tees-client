@@ -111,6 +111,18 @@ const Signin = () => {
       {signInForm()}
       {errorMessage()}
       {performRedirect()}
+      <div className="card mt-5 text-dark" style={{textAlign:'left'}}>
+        <div className="card-header">
+          <h4>Admin Details</h4>
+          <h6 class="card-subtitle mb-2 text-muted">(For testing purpose)</h6>
+        </div>
+        <div className="card-body">
+          <ul className="list-group">
+            <li className="list-group-item">Email: admin@tees.com</li>
+            <li className="list-group-item">Password: admin1262</li>
+          </ul>
+        </div>
+      </div>
       {/* <p>{JSON.stringify(values)}</p> */}
     </Base>
   )

@@ -42,7 +42,6 @@ const Cart = () => {
         <div className="col-md-6">
           <Payment products = {cartItems} setReload={setReload}/>
 
-
           <div className="card mt-5 text-dark" style={{textAlign:'left'}}>
             <div className="card-header">
               <h4>Card Details</h4>
