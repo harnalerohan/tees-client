@@ -49,7 +49,7 @@ const signout = next => {
   return fetch(`${API}/signout`, {
     method: "GET",
   }).then(response => {
-    console.log("Signout success")
+    console.log(response)
   })
   .catch(err => console.log(err))
   }

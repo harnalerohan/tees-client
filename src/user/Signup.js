@@ -19,7 +19,6 @@ const Signup = () => {
   const {name, email, password, contact, error, success} = values;
 
   const handleChange = name => (e) => {
-    // console.log(e.target)
     setValues({...values, error: false, [name]: e.target.value})
   }
 
@@ -30,7 +29,6 @@ const Signup = () => {
     UserService.signup({name, email, password, contact})
     .then(data => {
       if(data.error){
-        console.log(data)
         setValues({...values, error: data.error, success: false})
       }else{
         setValues({

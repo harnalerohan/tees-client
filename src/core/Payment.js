@@ -75,8 +75,6 @@ const Payment = ({products, setReload = (f) => f, reload = undefined}) => {
 
         setinfo({...info, success: response.success, loading: false})
 
-        console.log("PAYMENT SUCCESS")
-
         const orderData = {
           products: products,
           transaction_id: response.transaction.id,
@@ -86,7 +84,7 @@ const Payment = ({products, setReload = (f) => f, reload = undefined}) => {
         createOrder(userId, token, orderData);
 
         cartEmpty(() => {
-          console.log("did we got a crash?");
+        console.log("Payment success")
         })
 
         //TODO: force reload
