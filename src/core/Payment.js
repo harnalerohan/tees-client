@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { itemsInCart, cartEmpty } from './helper/cartHelper';
-import { getMeToken, processPayment } from './helper/paymentHelper';
+import { getMeToken, processPayment} from './helper/paymentHelper';
 import {createOrder} from "./helper/orderHelper"
 import UserService from '../auth/helper';
 import DropIn from "braintree-web-drop-in-react"
@@ -17,6 +17,7 @@ const Payment = ({products, setReload = (f) => f, reload = undefined}) => {
     instance: ""
   })
 
+  const contact = UserService.isAuthenticated().user.contact
   const userId = UserService.isAuthenticated().user._id
   const token = UserService.isAuthenticated().token
 

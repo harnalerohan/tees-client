@@ -11,11 +11,12 @@ const Signup = () => {
     name: "",
     email: "",
     password: "",
+    contact: "",
     error: "",
     success: false
   });
 
-  const {name, email, password, error, success} = values;
+  const {name, email, password, contact, error, success} = values;
 
   const handleChange = name => (e) => {
     // console.log(e.target)
@@ -26,17 +27,18 @@ const Signup = () => {
     e.preventDefault();
 
     setValues({...values, error: false, })
-    UserService.signup({name, email, password})
+    UserService.signup({name, email, password, contact})
     .then(data => {
       if(data.error){
         console.log(data)
-        setValues({...values, error: data.Error, success: false})
+        setValues({...values, error: data.error, success: false})
       }else{
         setValues({
           ...values, 
           name: "",
           email: "",
           password: "",
+          contact: "",
           error: "",
           success: true
         })
@@ -52,7 +54,7 @@ const Signup = () => {
     return(
       <div className="container">
         <div className="text-left">
-          <form action="">
+          <form>
 
             <div className="form-group">
               <label className="text-light form-label">Name</label>
@@ -69,7 +71,12 @@ const Signup = () => {
               <input value = {password} className="form-control" onChange = {handleChange("password")} type="password"/>
             </div>
 
-            <button onClick = {onSubmit} className="btn btn-success col-12 mt-4">Submit</button>
+            {/* <div className="form-group mt-3"> */}
+              <label className="text-light form-label">Contact</label>
+              <input required value = {contact} className="form-control" onChange = {handleChange("contact")} type="number"/>
+            {/* </div> */}
+
+            <button type="submit" onClick = {onSubmit} className="btn btn-success col-12 mt-4">Submit</button>
 
           </form>
         </div>
@@ -95,7 +102,7 @@ const Signup = () => {
     <div className="row">
     <div className="col-md-6 offset-sm-3 text-left">
     <div className="alert alert-danger" style = {{display: error ? "" : "none"}}>
-      User registration failed, with error {error}.
+      {error}.
     </div>
     </div>
     </div>

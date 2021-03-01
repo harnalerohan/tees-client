@@ -45,7 +45,7 @@ const Cart = () => {
           <div className="card mt-5 text-dark" style={{textAlign:'left'}}>
             <div className="card-header">
               <h4>Card Details</h4>
-              <h6 class="card-subtitle mb-2 text-muted">(For testing purpose)</h6>
+              <h6 className="card-subtitle mb-2 text-muted">(For testing purpose)</h6>
             </div>
             <div className="card-body">
               <ul className="list-group">

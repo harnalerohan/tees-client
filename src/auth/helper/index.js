@@ -2,7 +2,7 @@ import {API} from "../../backend"
 //API means ; localhost:8000/api
 
 const signup = user => {
-  console.log(localStorage)
+  console.log(user)
   return fetch(`${API}/signup`, {
     method: "POST",
     headers: {
@@ -30,7 +30,7 @@ const signin = user => {
   .then(response => {
     return response.json()
   })
-  .catch(console.log("Error"))
+  .catch(err => console.log(err))
 }
 
 
