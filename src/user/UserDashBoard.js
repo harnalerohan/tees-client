@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Base from '../core/Base'
 import UserService from "../auth/helper/index"
-import { getUserOrder } from './helper/userapicalls'
+import { getUserOrder, cancelUserOrder } from './helper/userapicalls'
 
 const UserDashboard = () => {
 
@@ -24,6 +24,15 @@ const UserDashboard = () => {
   useEffect(() => {
     preload()
   }, [])
+
+  const cancelOrder = (orderId) => {
+    cancelUserOrder(user._id, token, orderId).then(res => {
+      console.log(res)
+      preload()
+    }).catch(err => {
+      console.log(err)
+    })
+  }
 
   const userLeft = () => {
     return(
@@ -64,11 +73,11 @@ const UserDashboard = () => {
     {userOrders.length !== 0 ? (
         userOrders.map((order, i) => {
           return(
-          <div key={i} className="card">
+          <div key={i} className="card mb-3">
           <h5 className="card-header text-dark">
             Your Orders
           </h5>
-          <ul className="list-group">
+          <ul className="list-group mt-2">
             <div className="row">
             <div className="col-md-6">
               <li className="list-group-item bg-info">
@@ -106,6 +115,9 @@ const UserDashboard = () => {
                 </li>
                 )
               })}
+                <div className="col-12 mt-3 mb-2">
+                <button onClick={() => cancelOrder(order._id)} className="btn btn-danger btn-block">Cancel This order</button>
+                </div>
             </div>
             </div>
           </ul>
